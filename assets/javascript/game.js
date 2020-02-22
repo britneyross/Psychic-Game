@@ -37,14 +37,15 @@ document.onkeyup = function(event) {
     if (userChoice === computerChoice){
         wins++;
         document.getElementById('wins').innerHTML = "Wins: " + wins;
+        alert("You have guessed the correct letter! You must be psychic!");
         restart();
     } 
     else if (guessesLeft === 0) {
         losses++;
         document.getElementById('losses').innerHTML = "Loses: " + losses;
+        alert("You are out of chances! You are not psychic! Try again!");
         restart();
     }
-      
- }
+}
   
   
