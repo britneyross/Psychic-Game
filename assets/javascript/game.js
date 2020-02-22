@@ -32,7 +32,16 @@ document.onkeyup = function(event) {
       
     guessesSoFar.push(userChoice);
     countGuessesLeft();
-    farUserChoice();       
+    farUserChoice();     
+    
+    // make sure the user selects a value a-z
+    var regexp = /[a-z]/gi;
+    if (!regexp.test(userChoice)) {
+        alert("Please enter a letter");
+    }
+    else {
+        console.log(userChoice);
+    }
       
     if (userChoice === computerChoice){
         wins++;
